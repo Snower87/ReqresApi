@@ -19,7 +19,7 @@ public class GetSingleUserTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    @Story("Получение информации списке пользователей")
+    @Story("Получение информации об одном/конкретном пользователе")
     @Severity(SeverityLevel.MINOR)
     public void testGetListUsers() throws Exception {
         Response response = RestAssured

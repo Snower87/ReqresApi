@@ -6,7 +6,9 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import models.*;
+import models.ColorData;
+import models.ResourcesResponse;
+import models.Support;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -20,7 +22,7 @@ public class GetListResourcesTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    @Story("Получение информации списке ресурсов")
+    @Story("Проверка полей ресурса и получение списка")
     @Severity(SeverityLevel.MINOR)
     public void testSingleResource() throws Exception {
         Response response = RestAssured

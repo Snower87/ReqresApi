@@ -17,7 +17,7 @@ public class UserNotFoundTest {
     private final String BASE_URL = "https://reqres.in/api/users";
 
     @Test
-    @Story("Получение информации списке пользователей")
+    @Story("Пользователь не найден")
     @Severity(SeverityLevel.MINOR)
     public void testGetListUsers() throws Exception {
         Response response = RestAssured
@@ -29,8 +29,8 @@ public class UserNotFoundTest {
                 .extract()
                 .response();
 
-        // Проверка email пользователей
+        // Проверка JSON-тела ответа
         String responceBody = response.getBody().asString();
-        assertEquals("{}", responceBody, "Тело отввета не является пустым");
+        assertEquals("{}", responceBody, "Тело ответа не является пустым");
     }
 }
